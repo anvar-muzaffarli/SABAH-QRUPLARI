@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('./assets/css/_reset.css');
 a {
     text-decoration: none;
 }
-
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Roboto', sans-serif;
 
@@ -36,6 +38,14 @@ header a {
     .fa-bars {
         display: flex;
     }
+
+    .introduction .left-side {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 500px;
+    }
 }
 
 
@@ -44,3 +54,135 @@ header a {
         padding: 21px;
     }
 }
+
+
+/* INTRODUCTION HISSESI */
+
+.introduction {
+    display: flex;
+    padding: 20px 112.5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.introduction .left-side {
+    padding-top: 117px;
+    min-width: 695px;
+}
+
+.introduction h1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom:34px;
+}
+
+.introduction h1 span {
+    color:#FF8A56;
+}
+
+.introduction p {
+ 
+    color:#666;
+}
+
+.introduction .right-side {
+    padding-top: 70px;
+}
+
+.introduction .right-side img {
+    width: 100%;
+}
+
+.button-qrupu {
+    margin-top: 30px;
+}
+
+.introduction .left-side button {
+    width: 151px;
+    height: 58px;
+    background-color: #333;
+    color:#fff;
+    margin-right: 15px;
+}
+
+.introduction .left-side a {
+    margin-right: 10px;
+    color:#222;
+}
+
+
+@media(min-width:900px) and (max-width:1437px) {
+    .introduction .left-side {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media(max-width:900px)  {
+
+    .introduction {
+        padding-left: 20px !important;
+    }
+    .introduction .left-side {
+        min-width: 450px;
+        background-color: teal;
+        justify-content: flex-start !important;
+        
+
+    }
+
+    .introduction .left-side h1 {
+        font-size: 48px;
+    }
+
+    .introduction .left-side p {
+        width: 300px;
+    }
+    .introduction {
+        padding: 20px;
+    }
+}
+
+
+/* TRUSTED BY SECTION START */
+
+
+.trusted-by-section {
+    padding-top: 70px;
+}
+.trusted-by-section h5 {
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.trusted-by-companies {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* .trusted-by-company:first-child {
+display: none;
+} */
+
+/* n=1,2,3,4 */
+@media(max-width:768px) {
+    /* even cut */
+    .trusted-by-company:nth-child(odd) {
+        display: none;
+        }
+}
+
+
+@media(max-width:576px) {
+    .trusted-by-company:nth-child(2) {
+        display: none;
+    }
+}
+/* TRUSTED BY SECTION END */
